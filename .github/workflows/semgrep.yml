@@ -1,4 +1,10 @@
 on:
+  workflow_dispatch:
+    inputs:
+      purpose:
+        description: 'Purpose'     
+        required: true
+        default: 'test'
   pull_request: {}
   push:
     branches:
