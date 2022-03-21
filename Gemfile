@@ -5,7 +5,6 @@ source "https://rubygems.org"
 gem "rails", "6.0.0"
 
 ruby "2.6.5"
-
 gem "aruba"
 gem "bcrypt"
 gem "coffee-rails"
