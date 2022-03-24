@@ -97,7 +97,7 @@ retirements = [
 
 paid_time_off = [
   {
-    user: "jack@metacorp.com",
+    user: "test@user.com",
     sick_days_taken: 2,
     sick_days_earned: 5,
     pto_taken: 5,
