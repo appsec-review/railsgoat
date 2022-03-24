@@ -1,0 +1,29 @@
+name: Example workflow for Ruby using Snyk
+on: 
+  workflow_dispatch:
+    inputs:
+      purpose:
+        description: 'Purpose'     
+        required: true
+        default: 'test'
+  pull_request: {}
+  push:
+    branches:
+    - master
+    paths:
+    - .github/workflows/snyk-ruby.yml
+  schedule:
+  - cron: '0 0 * * 0'
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions/ruby@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+# This manipulates what threshold to report on
+# See here for more information: https://github.com/snyk/actions/tree/master/ruby
+#        with:
+#          args: --severity-threshold=high
