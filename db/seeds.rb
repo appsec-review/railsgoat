@@ -5,7 +5,7 @@
 
 users = [
   {
-    email: "admin@metacorp.com",
+    email: "test@test.com",
     admin: true,
     password: "admin1234",
     password_confirmation: "admin1234",
