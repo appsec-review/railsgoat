@@ -1,4 +1,4 @@
-name: Example workflow for Ruby using Snyk
+name: Snyk Ruby
 on: 
   workflow_dispatch:
     inputs:
@@ -7,11 +7,7 @@ on:
         required: true
         default: 'test'
   pull_request: {}
-  push:
-    branches:
-    - master
-    paths:
-    - .github/workflows/snyk-ruby.yml
+  push: {}
   schedule:
   - cron: '0 0 * * 0'
 jobs:
@@ -23,6 +19,12 @@ jobs:
         uses: snyk/actions/ruby@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          args: --sarif-file-output=snyk.sarif
+      - name: Upload result to GitHub Code Scanning
+        uses: github/codeql-action/upload-sarif@v1
+        with:
+          sarif_file: snyk.sarif
 # This manipulates what threshold to report on
 # See here for more information: https://github.com/snyk/actions/tree/master/ruby
 #        with:
