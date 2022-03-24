@@ -14,10 +14,10 @@ users = [
   },
 
   {
-    email: "jmmastey@metacorp.com",
+    email: "jmmasy@metacorp.com",
     admin: false,
     password: "railsgoat",
-    password_confirmation: "railsgoat!",
+    password_confirmation: "railsgoat",
     first_name: "Joseph",
     last_name: "Mastey",
   },
