@@ -16,7 +16,7 @@ users = [
   {
     email: "jmmastey@metacorp.com",
     admin: false,
-    password: "railsgoat!",
+    password: "railsgoat",
     password_confirmation: "railsgoat!",
     first_name: "Joseph",
     last_name: "Mastey",
