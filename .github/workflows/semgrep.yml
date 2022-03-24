@@ -29,7 +29,12 @@ jobs:
       with:
         publishToken: ${{ secrets.SEMGREP_APP_TOKEN }}
         generateSarif: "1"
-
+        config: >- # more at semgrep.dev/explore
+          p/security-audit
+          p/secrets
+          p/ruby
+          p/owasp-top-ten
+          p/raghav-test
       # Upload SARIF file generated in previous step
     - name: Upload SARIF file
       uses: github/codeql-action/upload-sarif@v1
