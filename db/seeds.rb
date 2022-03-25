@@ -5,7 +5,7 @@
 
 users = [
   {
-    email: "test@test.com",
+    email: "test2@test.com",
     admin: true,
     password: "admin1234",
     password_confirmation: "admin1234",
@@ -14,10 +14,10 @@ users = [
   },
 
   {
-    email: "jmmastey@metacorp.com",
+    email: "jmmasy@metacorp.com",
     admin: false,
-    password: "railsgoat!",
-    password_confirmation: "railsgoat!",
+    password: "railsgoat",
+    password_confirmation: "railsgoat",
     first_name: "Joseph",
     last_name: "Mastey",
   },
